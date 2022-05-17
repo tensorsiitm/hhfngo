@@ -10,6 +10,7 @@
   width:'100%';
   background: linear-gradient(to bottom, #fca311 75%, #14213d 25%);
 }
+
 .title #name {
   font-family: "Cinzel";
   border-bottom: 2px solid white;
@@ -82,4 +83,14 @@
 .text__overlay:hover {
 
   opacity: 1;
+}
+.header_div{
+  width:100%;
+  text-align: center;
+}
+.img_div,.div_stepper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
