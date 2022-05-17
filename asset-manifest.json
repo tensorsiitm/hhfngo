@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6f7f8d10.css",
+    "main.js": "/static/js/main.48ee4e65.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/montain.jpg": "/static/media/montain.96d4bc2ab7cefd6fbb7f.jpg",
+    "index.html": "/index.html",
+    "main.6f7f8d10.css.map": "/static/css/main.6f7f8d10.css.map",
+    "main.48ee4e65.js.map": "/static/js/main.48ee4e65.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f7f8d10.css",
+    "static/js/main.48ee4e65.js"
+  ]
+}
