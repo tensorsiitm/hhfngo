@@ -167,69 +167,100 @@ export const Education = (props) => {
         <div id="name">Education</div>
         <div id="caption" className="text-center"></div>
       </div> */}
-      <div>
+      <div className="outer____div">
         <div className="outermost_div">
-          <Typography variant="h4" className={classes.head}>
-            WHAT WE DO
-          </Typography>
-          <h6 className={classes.underlineH61}></h6>
-          <div className="container ">
-            <div className="row px-2 what_div">
-              {Education_data_.map((item) => (
-                <div className="col-12 col-sm-5 col-lg-3 slider-pick m-2">
-                  <div className={classes.box} id="text_appearing">
-                    <CastForEducationRoundedIcon className={classes.image} />
-                    <Typography className={classes.text}>{item.Tag}</Typography>
+          <div>
+            <Typography variant="h4" className={classes.head}>
+              WHAT WE DO
+            </Typography>
+            <h6 className={classes.underlineH61}></h6>
+            <div className="container ">
+              <div className="row px-2 what_div">
+                {Education_data_.map((item) => (
+                  <div className="col-12 col-sm-5 col-lg-3 slider-pick m-2">
+                    <div className={classes.box} id="text_appearing">
+                      <CastForEducationRoundedIcon className={classes.image} />
+                      <Typography className={classes.text}>
+                        {item.Tag}
+                      </Typography>
 
-                    <h6 className={classes.underlineH6}></h6>
-                  </div>
-                  <div className="text__overlay">
-                    <Typography className={classes.text}>
-                      {item.Tag}
                       <h6 className={classes.underlineH6}></h6>
-                    </Typography>
+                    </div>
+                    <div className="text__overlay">
+                      <Typography className={classes.text}>
+                        {item.Tag}
+                        <h6 className={classes.underlineH6}></h6>
+                      </Typography>
 
-                    <Typography>{item.Problem}</Typography>
-                    <a
-                      href={"#" + item.Tag.split(" ")[0]}
-                      className="btn mt-3"
-                      style={{ backgroundColor: "#14213d", color: "#fff" }}
-                    >
-                      Know More
-                    </a>
+                      <Typography>{item.Problem}</Typography>
+                      <a
+                        href={"#" + item.Tag.split(" ")[0]}
+                        className="btn mt-3"
+                        style={{ backgroundColor: "#14213d", color: "#fff" }}
+                      >
+                        Know More
+                      </a>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div>
         <div>
-          {Education_data_information.map((education, index) => (
-            <div key={index} id={education.Tag.split(" ")[0]}>
-              <div className="header_div mb-3 pt-3">
-                <Typography variant="h4">
-                  {education.Tag}
-                  <h6 className={classes.underlineH6}></h6>
-                </Typography>
-              </div>
-              <div className="row ">
-                <div className="d-none d-md-block col-md-6 img_div px-3">
-                  <img src={pic} className="img-fluid" />
+          <div>
+            {Education_data_information.map((education, index) => (
+              <div key={index} id={education.Tag.split(" ")[0]}>
+                <div className="row ">
+                  {index % 2 == 0 ? (
+                    <div className="outer__div">
+                      <div className="d-none d-md-block col-md-6 img__div">
+                        <img src={pic} className="img__conatainer" />
+                      </div>
+                      <div
+                        className="col-12 col-md-6 div_stepper"
+                        style={{
+                          backgroundColor:
+                            index % 2 == 0 ? "#14213d" : "#fca311 ",
+                          color: "white",
+                        }}
+                      >
+                        <div className="header_div mb-3 pt-3">
+                          <Typography variant="h4">
+                            {education.Tag}
+                            <h6 className={classes.underlineH6}></h6>
+                          </Typography>
+                        </div>
+                        <VerticalLinearStepper education={education.infor} />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="outer__div">
+                      <div
+                        className="col-12 col-md-6 div_stepper"
+                        style={{
+                          backgroundColor:
+                            index % 2 == 0 ? "#14213d" : "#fca311 ",
+                          color: "white",
+                        }}
+                      >
+                        <div className="header_div mb-3 pt-3">
+                          <Typography variant="h4">
+                            {education.Tag}
+                            <h6 className={classes.underlineH61}></h6>
+                          </Typography>
+                        </div>
+                        <VerticalLinearStepper education={education.infor} />
+                      </div>
+                      <div className="d-none d-md-block col-md-6 img__div">
+                        <img src={pic} className="img__conatainer" />
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div
-                  className="col-12 col-md-6 div_stepper"
-                  style={{
-                    backgroundColor: index % 2 == 0 ? "#14213d" : "#fca311 ",
-                    color: "white",
-                  }}
-                >
-                  <VerticalLinearStepper education={education.infor} />
-                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

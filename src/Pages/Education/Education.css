@@ -7,15 +7,21 @@
   margin: 0;
 }
 .outermost_div{
-  width:'100%';
+  width:100% !important;
+  padding: 0px !important;
+  margin: 0px !important;
   background: linear-gradient(to bottom, #fca311 75%, #14213d 25%);
 }
-
 .title #name {
   font-family: "Cinzel";
   border-bottom: 2px solid white;
 }
-
+.outer____div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0  !important;
+}
 #caption {
   font-family: "Estonia", serif;
   font-size: 30px;
@@ -69,7 +75,7 @@
 
 }
 /* 
-.text__overlay {
+.text__overlay {Fim
   transform: translateY(-30px);
   transition: transform 0.75s;
 }
@@ -86,9 +92,29 @@
 }
 .header_div{
   width:100%;
+
   text-align: center;
 }
-.img_div,.div_stepper{
+.outer__div{
+  display: flex;
+  padding: 0 !important;
+}
+.img__div{
+  width: 100%;
+  height: 100% !important;
+  padding: 0px  !important;
+  overflow: hidden;
+}
+.img__conatainer{
+  width: 100% !important;;
+  height: 100% !important;
+  object-fit: fill !important;
+  transition: 0.5s all ease-in-out;
+}
+.img__conatainer:hover{
+  transform: scale(1.2);
+}
+.img__div,.div_stepper{
   display: flex;
   flex-direction: column;
   justify-content: center;
