@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+.images{
+    aspect-ratio: 5 / 2;
+}
+
+.container1{
+    box-shadow: 0 0 25px 0 #803e00;
+}
+
+.welcomegrid{
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #15133c;
+    color: #F1eee9;
+    font-weight: bold;
+    text-align: center;
+
+}
+.h2w{
+    text-shadow: 2px 2px 4px #ec994b;
+}
+.hr1{
+    background: none;
+    border-top: 2px solid #ec994b;
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem ;
+    opacity: 70%;
+}
+.vision{
+    border: 2px solid #ec994b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: block;
+    margin: 4rem auto;
+    max-width: min(90%,850px);
+}
+.welcome {       
+    padding: 2rem;
+    display: block;
+    margin: 3rem auto 0 auto;
+    max-width: min(90%,700px);
+}
+
+
+.spangrid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paper1{
+    margin: 3rem 15%;
+}
+
+p.unsdg{
+    text-align: center;
+    text-shadow: 2px 2px 4px #ffff00;
+    color: #ec994b;
+    font-family: 'Koulen', cursive;
+    font-size: 4.3vw;
+    word-spacing: 1vw;
+    margin: 10% 5% 0 5%;
+}
+
+@media screen and (min-width:960px) {
+    p.unsdg{
+        font-size: 2.5vw;
+    }
+}
+
+img.undesa{
+    margin: 40px 0;
+}
+
+@media screen and (min-width:960px) {
+    .xsgapssdg{
+        display: none;
+    }
+}
+
+img.goals{
+    width: 80%;
+    margin: 10%;
+}
+img.goalsa{
+    width: 80%;
+    margin: 100% 10%;
+}
+
+
+.container3{
+    color: thistle;
+    background-color: #15133c;
+}
+
+.impactgrid{
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+.h3impact{   
+    margin: 40px 0 ;
+    text-align: center;    
+}
+span.h3{
+    color: orange;
+    font-size: 2.5rem;
+}
+
+.impacts{
+    border-radius: 2em;
+    background-color: #feb200;
+    color: black;
+    width: 90%;
+    margin: 20px 0 40px 0;
+    font-size: larger;
+    aspect-ratio: 1 / 1;
+    padding: 20% 0 0 0;
+    text-shadow: 2px 2px 4px #00f7ff;
+}
+
+.impspan{
+    color: red;
+    font-size: 2rem;
+}
+
+.h2donate{
+    color: crimson;
+    margin: 40px 0 ;
+    text-align: center;    
+}
