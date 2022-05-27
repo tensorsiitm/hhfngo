@@ -1,0 +1,73 @@
+.logo{
+    height: 45px;
+    margin:  0 15px;
+}
+
+.css-1oaipzr {
+    max-width: 60px !important;
+}
+
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
+    width:85vw;
+    max-width: 350px;
+}
+
+a {
+    color: inherit!important;
+    text-decoration: none !important;
+}
+.homelike{
+    padding: 6px 12px;
+}
+.homelikexs{
+    padding: 8px 24px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 45px !important;
+}
+.css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root{
+    padding: 8px 24px !important;
+}
+
+
+@media (min-width: 600px)
+{
+.css-1cndkqf-MuiToolbar-root {
+    min-height: 55px!important;
+}}
+
+.dropdown-menu{
+    background-color: #0000008c!important;
+    color: white!important;
+    text-align: center!important;
+    margin-top: 5px!important;
+    padding: 0 !important;
+}
+
+.dropdown-item:hover{
+    background-color: transparent!important;
+}
+
+.dropdown-toggle {
+    
+    color: inherit!important; 
+    background-color: transparent!important; 
+    border-color: transparent!important; 
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 0 0 transparent!important;
+}
+
+.css-7mt4h1-MuiInputBase-root .MuiInputBase-input {
+    border: 1px solid grey!important;
+    border-radius: 10px!important;
+}
+
+.MuiDivider-root{
+    background: transparent !important;
+}
+
+.css-11s5f5 {
+    padding: 4px 24px !important;
+}
