@@ -1,119 +1,287 @@
 import pic from "../../Shared/images/montain.jpg";
-import CountUp from "react-countup";
 import "./Poverty_Alleviation.css";
+import { Block } from "../../Components/Block/Block";
 import { Typography, makeStyles } from "@material-ui/core";
-import SchoolRoundedIcon from "@material-ui/icons/SchoolRounded";
-import PublicRoundedIcon from "@material-ui/icons/PublicRounded";
-import PersonRoundedIcon from "@material-ui/icons/PersonRounded";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const useStyles = makeStyles({
-  underlineH6: {
-    marginTop: "10px",
+  head: {
+    color: "#FFF",
+    textAlign: "center",
     marginBottom: "10px",
-    marginLeft: "calc(50% - 20px)",
-    maxWidth: "40px",
-    minHeight: "4px",
-    backgroundColor: "#fff",
-    borderRadius: "16px",
   },
-  header: {
+  box: {},
+  image: {
     width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginBottom: "70px",
-    color: "#14213d",
-  },
-  imgDiv: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "20px",
-  },
-  countDiv: {
-    fontSize: "20px",
-    fontWeight: "800",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "20px",
-    marginBottom: "20px",
-  },
-  images: {
-    fontSize: "100px",
+    fontSize: "150px",
     color: "#fca311",
   },
-  text: { color: "#14213d" },
-  underlineH61: {
+  text: {
+    color: "#14213d",
+  },
+  upperDiv: {
+    position: "absolute",
+    bottom: "0",
+    color: "white",
+    left: "0",
+    width: "100%",
+    zIndex: "100",
+    padding: "10px",
+    textAlign: "center",
+    fontSize: "8px",
+    backgroundColor: "#14213d",
+    transition: "all 0.5s linear",
+    opacity: 0,
+    "&:hover": {
+      opacity: 1,
+      cursor: "pointer",
+    },
+  },
+  underlineH62: {
     marginTop: "10px",
     marginBottom: "10px",
     marginLeft: "calc(50% - 20px)",
     maxWidth: "40px",
     minHeight: "4px",
-    backgroundColor: "#fca311",
+    backgroundColor: "#14213d",
     borderRadius: "16px",
   },
 });
-
 export const Poverty_Alleviation = (props) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   const classes = useStyles();
+  const Poverty_Alleviation_ = [
+    {
+      id: "CELEBRATION",
+      body: (
+        <div>
+          <span>C</span>elebrating birthdays, main stream events, festivals free
+          of cost with the unprivileged children boosts the morale of the kids
+          and they experience the happiness too, thus the feeling of being in
+          poverty vanishes briefly.
+        </div>
+      ),
+      header: "CELEBRATION OF EVENTS",
+      idFake: "Celebration",
+    },
+    {
+      id: "DISTRIBUTION",
+      body: (
+        <div>
+          <span>P</span>re-owned clothing donated to us by mainstream society
+          are distributed free to our unprivileged beneficiaries which supports
+          their household, thus reducing poverty to a fraction.
+        </div>
+      ),
+      header: "DISTRIBUTION OF BOOKS",
+      idFake: "Distribution",
+    },
+    {
+      id: "SCHOOL",
+      body: (
+        <div>
+          <span>S</span>chool notebooks, stationary, crayons are distributed
+          free to unprivileged children studying in govt and semi-private
+          schools free of cost
+        </div>
+      ),
+      header: "SCHOOL EDUCATION MATERIAL",
+      idFake: "School",
+    },
+  ];
   const Poverty_Alleviation_Data = [
     {
-      image: <SchoolRoundedIcon className={classes.images} />,
-      count: 197,
-      Tag: "Number Of Schools",
-      suffix: "k",
+      image: pic,
+      header: "CELEBRATION OF EVENTS",
+      idFake: "Celebration",
     },
     {
-      image: <PublicRoundedIcon className={classes.images} />,
-      count: 45,
-      Tag: "Countries Explored",
-      suffix: " ",
+      image: pic,
+      header: "DISTRIBUTION OF PREOWNED / NEW APPARELS / BLANKETS",
+      idFake: "Distribution",
     },
     {
-      image: <PersonRoundedIcon className={classes.images} />,
-      count: 96,
-      Tag: "Students We Made",
-      suffix: "M",
+      image: pic,
+      header: "SCHOOL EDUCATION MATERIAL SUPPLIES",
+      idFake: "School",
     },
   ];
   return (
-    <div className="mt-5">
-      <div className="count">
-        <div className={classes.header}>
-          <div>
-            <Typography variant="h3">SOCIAL IMPACT</Typography>
-
-            <h6 className={classes.underlineH61}></h6>
+    <>
+      <div>
+        <div className="heading mt-5">
+          <Typography variant="h5"> POVERTY ALLEVIATION</Typography>
+          <h6 className="underlineH61"></h6>
+        </div>
+        <div className="container">
+          <div className="row">
+            {Poverty_Alleviation_Data.map((poverty, index) => (
+              <div key={index} className="col-12 col-md-4 mt-3 div__">
+                <Block
+                  poverty={poverty}
+                  poverty_data={Poverty_Alleviation_[index]}
+                />
+              </div>
+            ))}
           </div>
         </div>
-        <div className="row">
-          {Poverty_Alleviation_Data.map((item) => (
-            <div
-              className="col-12 col-md-4"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <div className="Div">
-                <div className={classes.imgDiv}>{item.image}</div>
+      </div>
+      {/* */}
 
-                <div className={classes.countDiv}>
-                  <CountUp end={item.count} suffix={item.suffix} />
+      <div>
+        <div className="container">
+          {Poverty_Alleviation_.map((poverty, index) => (
+            <div id={poverty.idFake}>
+              <div className="row my-3">
+                <div
+                  className="header_div mb-3 pt-3"
+                  style={{ color: "#fca311" }}
+                >
+                  <Typography variant="h4">
+                    {poverty.header}
+                    <h6 className={classes.underlineH62}></h6>
+                  </Typography>
                 </div>
-              </div>
-              <div style={{ marginTop: "40px" }}>
-                <Typography variant="h5" className={classes.text}>
-                  {item.Tag}
-                </Typography>
-                <h6 className={classes.underlineH61}></h6>
+                {index % 2 == 0 ? (
+                  <motion.div
+                    className="box"
+                    ref={ref}
+                    variants={boxVariant}
+                    initial="hidden"
+                    animate={control}
+                  >
+                    <div className="outer__div">
+                      <div
+                        className="d-none d-md-block col-md-6 img__div"
+                        style={{
+                          borderRadius: "16px",
+                        }}
+                      >
+                        <div
+                          id="carouselExampleIndicators"
+                          className="carousel slide"
+                          data-bs-ride="carousel"
+                          style={{ height: "100%" }}
+                        >
+                          <div
+                            className="carousel-inner"
+                            style={{ height: "100%" }}
+                          >
+                            <div
+                              className="carousel-item active"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                            <div
+                              className="carousel-item"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                            <div
+                              className="carousel-item"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-6 div_stepper text-center"
+                        style={{
+                          color: index % 2 == 0 ? "#14213d" : "#fca311 ",
+                        }}
+                      >
+                        {poverty.body}
+                      </div>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <div className="outer__div">
+                    <div
+                      className="col-12 col-md-6 div_stepper text-center"
+                      style={{
+                        color: index % 2 != 0 ? "#14213d" : "#fca311 ",
+                      }}
+                    >
+                      {poverty.body}
+                    </div>
+                    <div
+                      className="d-none d-md-block col-md-6 img__div"
+                      style={{ borderRadius: "16px" }}
+                    >
+                      <div
+                        id="carouselExampleIndicators"
+                        className="carousel slide"
+                        data-bs-ride="carousel"
+                        style={{ height: "100%" }}
+                      >
+                        <div
+                          className="carousel-inner"
+                          style={{ height: "100%" }}
+                        >
+                          <div
+                            className="carousel-item active"
+                            style={{ height: "100%" }}
+                          >
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
+                          </div>
+                          <div
+                            className="carousel-item"
+                            style={{ height: "100%" }}
+                          >
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
+                          </div>
+                          <div
+                            className="carousel-item"
+                            style={{ height: "100%" }}
+                          >
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };

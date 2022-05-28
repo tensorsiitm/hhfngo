@@ -37,7 +37,7 @@ export default function VerticalLinearStepper(props) {
   };
   const classes = useStyles();
   return (
-    <Box sx={{ maxWidth: 600 }}>
+    <Box sx={{ maxWidth: 500 }}>
       <Stepper activeStep={activeStep} orientation="vertical">
         {props.education.map((step, index) => (
           <Step key={index}>

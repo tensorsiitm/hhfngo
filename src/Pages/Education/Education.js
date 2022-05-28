@@ -1,9 +1,9 @@
 import { Typography, makeStyles } from "@material-ui/core";
-import { Caarousel } from "../../Components/Carousel/Carousel";
 import pic from "../../Shared/images/montain.jpg";
 import VerticalLinearStepper from "../../Components/Stepper/Stepper";
 import CastForEducationRoundedIcon from "@material-ui/icons/CastForEducationRounded";
 import "./Education.css";
+
 const useStyles = makeStyles({
   head: {
     color: "#FFF",
@@ -27,6 +27,24 @@ const useStyles = makeStyles({
     minHeight: "4px",
     backgroundColor: "#fca311",
     borderRadius: "16px",
+  },
+  upperDiv: {
+    position: "absolute",
+    bottom: "0",
+    color: "white",
+    left: "0",
+    width: "100%",
+    zIndex: "100",
+    padding: "10px",
+    textAlign: "center",
+    fontSize: "8px",
+    backgroundColor: "#14213d",
+    transition: "all 0.5s linear",
+    opacity: 0,
+    "&:hover": {
+      opacity: 1,
+      cursor: "pointer",
+    },
   },
   underlineH61: {
     marginTop: "10px",
@@ -67,6 +85,8 @@ const Education_data_ = [
 const Education_data_information = [
   {
     Tag: "Kindergarten Education",
+    impact:
+      "300 Students directly benefitted through the sessions and learned basic reading, writing and arithmetic skills",
     infor: [
       {
         label: "Problem",
@@ -82,6 +102,8 @@ const Education_data_information = [
   },
   {
     Tag: "Academic Education",
+    impact:
+      "300 Students directly benefitted through the sessions and learned basic reading, writing and arithmetic skills",
     infor: [
       {
         label: "Problem",
@@ -97,6 +119,8 @@ const Education_data_information = [
   },
   {
     Tag: "Remedial Learning",
+    impact:
+      "300 Students directly benefitted through the sessions and learned basic reading, writing and arithmetic skills",
     infor: [
       {
         label: "Problem",
@@ -112,6 +136,8 @@ const Education_data_information = [
   },
   {
     Tag: "Digital Learning",
+    impact:
+      "300 Students directly benefitted through the sessions and learned basic reading, writing and arithmetic skills",
     infor: [
       {
         label: "Problem",
@@ -127,6 +153,8 @@ const Education_data_information = [
   },
   {
     Tag: "Summer Camps",
+    impact:
+      "300 Students directly benefitted through the sessions and learned basic reading, writing and arithmetic skills",
     infor: [
       {
         label: "Problem",
@@ -142,6 +170,8 @@ const Education_data_information = [
   },
   {
     Tag: "Value Education",
+    impact:
+      "300 Students directly benefitted through the sessions and learned basic reading, writing and arithmetic skills",
     infor: [
       {
         label: "Problem",
@@ -167,8 +197,8 @@ export const Education = (props) => {
         <div id="name">Education</div>
         <div id="caption" className="text-center"></div>
       </div> */}
-      <div className="outer____div">
-        <div className="outermost_div">
+      <div className=" outer____div">
+        <div className=" d-none d-md-block  outermost_div">
           <div>
             <Typography variant="h4" className={classes.head}>
               WHAT WE DO
@@ -214,8 +244,50 @@ export const Education = (props) => {
                 <div className="row ">
                   {index % 2 == 0 ? (
                     <div className="outer__div">
-                      <div className="d-none d-md-block col-md-6 img__div">
-                        <img src={pic} className="img__conatainer" />
+                      <div
+                        id={index}
+                        className="d-none d-md-block col-md-6 img__div"
+                      >
+                        <div className="upperDiv">{education.impact}</div>
+                        <div
+                          id="carouselExampleIndicators"
+                          className="carousel slide"
+                          data-bs-ride="carousel"
+                          style={{ height: "100%" }}
+                        >
+                          <div
+                            className="carousel-inner"
+                            style={{ height: "100%" }}
+                          >
+                            <div
+                              className="carousel-item active"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                            <div
+                              className="carousel-item"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                            <div
+                              className="carousel-item"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div
                         className="col-12 col-md-6 div_stepper"
@@ -253,7 +325,46 @@ export const Education = (props) => {
                         <VerticalLinearStepper education={education.infor} />
                       </div>
                       <div className="d-none d-md-block col-md-6 img__div">
-                        <img src={pic} className="img__conatainer" />
+                        <div className="upperDiv">{education.impact}</div>
+                        <div
+                          id="carouselExampleIndicators"
+                          className="carousel slide"
+                          data-bs-ride="carousel"
+                          style={{ height: "100%" }}
+                        >
+                          <div
+                            className="carousel-inner"
+                            style={{ height: "100%" }}
+                          >
+                            <div
+                              className="carousel-item active"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                            <div
+                              className="carousel-item"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                            <div
+                              className="carousel-item"
+                              style={{ height: "100%" }}
+                            >
+                              <img
+                                src={pic}
+                                className="d-block w-100 img__conatainer"
+                              />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   )}

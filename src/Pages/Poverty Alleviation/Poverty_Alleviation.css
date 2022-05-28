@@ -1,15 +1,87 @@
-.Div{
+.Div {
     margin: 10px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #14213d;
-    color:#fca311;
+    color: #fca311;
     transition: all linear 0.25s;
 }
-.Div:hover{
-    
+
+.Div:hover {
+
     transform: scale(1.2);
     box-shadow: 0 0 5px #fca311;
-   
+
+}
+
+.accordion {
+    width: 600px !important;
+
+}
+
+.accordion-item {
+    background-image: url("../../Shared/images/poverty.jpg");
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.accordion-button-collapsed {
+    color: #0c63e4;
+    background-color: none !important;
+}
+
+.icon--button {
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-right: 4px solid #14213d;
+}
+
+.accordion-button {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: row;
+}
+
+.accordion-button:focus {
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+    background-color: none !important;
+}
+
+.accordion-button:hover {
+    box-shadow: 0px 0px 2px 2px grey !important;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #14213d;
+}
+
+.div__ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.profile {
+    width: 100%;
+    height: 350px
+}
+
+.percentage {
+    font-size: 30px
+}
+
+.testimonials {
+    height: 350px
 }

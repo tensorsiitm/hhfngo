@@ -6,22 +6,26 @@
   left: calc(50vw - 100px);
   margin: 0;
 }
-.outermost_div{
-  width:100% !important;
+
+.outermost_div {
+  width: 100% !important;
   padding: 0px !important;
   margin: 0px !important;
   background: linear-gradient(to bottom, #fca311 75%, #14213d 25%);
 }
+
 .title #name {
   font-family: "Cinzel";
   border-bottom: 2px solid white;
 }
-.outer____div{
+
+.outer____div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0  !important;
+  padding: 0 !important;
 }
+
 #caption {
   font-family: "Estonia", serif;
   font-size: 30px;
@@ -42,22 +46,25 @@
   text-align: center;
   transition: box-shadow linear 0.25s;
 }
-.what_div{
+
+.what_div {
   display: flex;
   justify-content: space-evenly;
- 
+
   width: 100%;
 }
-#text_appearing:hover{
- opacity:0;
+
+#text_appearing:hover {
+  opacity: 0;
   transition: opacity 0.5s;
 }
-#text_apearing{
-  opacity:1;
+
+#text_apearing {
+  opacity: 1;
 }
 
 .text__overlay {
-  color:#14213d;
+  color: #14213d;
   position: absolute;
   padding: 10px;
   top: 0;
@@ -74,6 +81,7 @@
   opacity: 0;
 
 }
+
 /* 
 .text__overlay {Fim
   transform: translateY(-30px);
@@ -90,33 +98,61 @@
 
   opacity: 1;
 }
-.header_div{
-  width:100%;
+
+.header_div {
+  width: 100%;
 
   text-align: center;
 }
-.outer__div{
+
+.outer__div {
   display: flex;
   padding: 0 !important;
 }
-.img__div{
+
+.img__div {
+  position: relative;
   width: 100%;
   height: 100% !important;
-  padding: 0px  !important;
+  padding: 0px !important;
   overflow: hidden;
 }
-.img__conatainer{
-  width: 100% !important;;
+
+.img__conatainer {
+  width: 100% !important;
+  ;
   height: 100% !important;
   object-fit: fill !important;
   transition: 0.5s all ease-in-out;
 }
-.img__conatainer:hover{
+
+.img__conatainer:hover {
   transform: scale(1.2);
 }
-.img__div,.div_stepper{
+
+.img__div, .div_stepper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+}
+
+.upperDiv {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  color: white;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 1vw;
+  background: #14213d;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.img__div:hover>.upperDiv {
+  opacity: 1 !important;
 }
