@@ -190,13 +190,6 @@ export const Education = (props) => {
   const classes = useStyles();
   return (
     <>
-      {/* <div className="outer-div">
-        <Caarousel />
-      </div>
-      <div className="title">
-        <div id="name">Education</div>
-        <div id="caption" className="text-center"></div>
-      </div> */}
       <div className=" outer____div">
         <div className=" d-none d-md-block  outermost_div">
           <div>
@@ -225,8 +218,8 @@ export const Education = (props) => {
                       <Typography>{item.Problem}</Typography>
                       <a
                         href={"#" + item.Tag.split(" ")[0]}
-                        className="btn mt-3"
-                        style={{ backgroundColor: "#14213d", color: "#fff" }}
+                        className="btn mt-3 text-white"
+                        style={{ backgroundColor: "#14213d" }}
                       >
                         Know More
                       </a>

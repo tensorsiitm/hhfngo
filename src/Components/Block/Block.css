@@ -54,7 +54,7 @@
     transition: all 0.25s;
 }
 
-a {
+.ac {
     font-weight: 700 !important;
     border: none !important;
     box-shadow: none !important;

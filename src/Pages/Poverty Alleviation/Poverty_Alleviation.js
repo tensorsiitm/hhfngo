@@ -2,10 +2,9 @@ import pic from "../../Shared/images/montain.jpg";
 import "./Poverty_Alleviation.css";
 import { Block } from "../../Components/Block/Block";
 import { Typography, makeStyles } from "@material-ui/core";
-import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
+import TypeWriterEffect from "react-typewriter-effect";
+import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
+import ArrowRightRoundedIcon from "@material-ui/icons/ArrowRightRounded";
 const useStyles = makeStyles({
   head: {
     color: "#FFF",
@@ -50,19 +49,6 @@ const useStyles = makeStyles({
   },
 });
 export const Poverty_Alleviation = (props) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-  const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, scale: 0 },
-  };
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
   const classes = useStyles();
   const Poverty_Alleviation_ = [
     {
@@ -77,6 +63,7 @@ export const Poverty_Alleviation = (props) => {
       ),
       header: "CELEBRATION OF EVENTS",
       idFake: "Celebration",
+      impact: "https://www.facebook.com/pg/hhfngomum/",
     },
     {
       id: "DISTRIBUTION",
@@ -89,6 +76,7 @@ export const Poverty_Alleviation = (props) => {
       ),
       header: "DISTRIBUTION OF BOOKS",
       idFake: "Distribution",
+      impact: "https://www.facebook.com/pg/hhfngomum/",
     },
     {
       id: "SCHOOL",
@@ -101,6 +89,7 @@ export const Poverty_Alleviation = (props) => {
       ),
       header: "SCHOOL EDUCATION MATERIAL",
       idFake: "School",
+      impact: "https://www.facebook.com/pg/hhfngomum/",
     },
   ];
   const Poverty_Alleviation_Data = [
@@ -157,79 +146,95 @@ export const Poverty_Alleviation = (props) => {
                   </Typography>
                 </div>
                 {index % 2 == 0 ? (
-                  <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={boxVariant}
-                    initial="hidden"
-                    animate={control}
-                  >
-                    <div className="outer__div">
+                  <div className="outer__div">
+                    <div
+                      className="d-none d-md-block col-md-6 img__div"
+                      style={{
+                        borderRadius: "16px",
+                      }}
+                    >
                       <div
-                        className="d-none d-md-block col-md-6 img__div"
-                        style={{
-                          borderRadius: "16px",
-                        }}
+                        id="carouselExampleIndicators"
+                        className="carousel slide"
+                        data-bs-ride="carousel"
+                        style={{ height: "100%" }}
                       >
                         <div
-                          id="carouselExampleIndicators"
-                          className="carousel slide"
-                          data-bs-ride="carousel"
+                          className="carousel-inner"
                           style={{ height: "100%" }}
                         >
                           <div
-                            className="carousel-inner"
+                            className="carousel-item active"
                             style={{ height: "100%" }}
                           >
-                            <div
-                              className="carousel-item active"
-                              style={{ height: "100%" }}
-                            >
-                              <img
-                                src={pic}
-                                className="d-block w-100 img__conatainer"
-                              />
-                            </div>
-                            <div
-                              className="carousel-item"
-                              style={{ height: "100%" }}
-                            >
-                              <img
-                                src={pic}
-                                className="d-block w-100 img__conatainer"
-                              />
-                            </div>
-                            <div
-                              className="carousel-item"
-                              style={{ height: "100%" }}
-                            >
-                              <img
-                                src={pic}
-                                className="d-block w-100 img__conatainer"
-                              />
-                            </div>
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
+                          </div>
+                          <div
+                            className="carousel-item"
+                            style={{ height: "100%" }}
+                          >
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
+                          </div>
+                          <div
+                            className="carousel-item"
+                            style={{ height: "100%" }}
+                          >
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="col-12 col-md-6 div_stepper text-center"
-                        style={{
-                          color: index % 2 == 0 ? "#14213d" : "#fca311 ",
-                        }}
-                      >
+                    </div>
+                    <div
+                      className="col-12 col-md-6 div_stepper text-center center_1"
+                      style={{
+                        color: index % 2 == 0 ? "#14213d" : "#fca311 ",
+                      }}
+                    >
+                      <div className="center_">
                         {poverty.body}
+                        <a href={poverty.impact} className="btn impact mt-2">
+                          Learn More
+                          <span className="span4">
+                            <ArrowForwardIosRoundedIcon />
+                          </span>
+                          <span className="span3">
+                            <ArrowRightRoundedIcon />
+                            <ArrowRightRoundedIcon />
+                          </span>
+                        </a>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ) : (
                   <div className="outer__div">
                     <div
-                      className="col-12 col-md-6 div_stepper text-center"
+                      className="col-12 col-md-6 div_stepper text-center center_1"
                       style={{
                         color: index % 2 != 0 ? "#14213d" : "#fca311 ",
                       }}
                     >
-                      {poverty.body}
+                      <div className="center_">
+                        {poverty.body}
+                        <a href={poverty.impact} className="btn impact mt-2">
+                          Learn More
+                          <span className="span4">
+                            <ArrowForwardIosRoundedIcon />
+                          </span>
+                          <span className="span3">
+                            <ArrowRightRoundedIcon />
+                            <ArrowRightRoundedIcon />
+                          </span>
+                        </a>
+                      </div>
                     </div>
                     <div
                       className="d-none d-md-block col-md-6 img__div"
