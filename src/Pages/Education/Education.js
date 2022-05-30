@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     color: "#FFF",
     textAlign: "center",
     marginBottom: "10px",
+    paddingTop: "10px",
   },
   box: {},
   image: {
@@ -241,7 +242,15 @@ export const Education = (props) => {
                         id={index}
                         className="d-none d-md-block col-md-6 img__div"
                       >
-                        <div className="upperDiv">{education.impact}</div>
+                        <div
+                          className="upperDiv"
+                          style={{
+                            backgroundColor:
+                              index % 2 != 0 ? "#E8630A" : "#14213d",
+                          }}
+                        >
+                          {education.impact}
+                        </div>
                         <div
                           id="carouselExampleIndicators"
                           className="carousel slide"
@@ -286,7 +295,7 @@ export const Education = (props) => {
                         className="col-12 col-md-6 div_stepper"
                         style={{
                           backgroundColor:
-                            index % 2 == 0 ? "#14213d" : "#fca311 ",
+                            index % 2 == 0 ? "#14213d" : "#E8630A ",
                           color: "white",
                         }}
                       >
@@ -305,7 +314,7 @@ export const Education = (props) => {
                         className="col-12 col-md-6 div_stepper"
                         style={{
                           backgroundColor:
-                            index % 2 == 0 ? "#14213d" : "#fca311 ",
+                            index % 2 == 0 ? "#14213d" : "#E8630A ",
                           color: "white",
                         }}
                       >
@@ -318,7 +327,15 @@ export const Education = (props) => {
                         <VerticalLinearStepper education={education.infor} />
                       </div>
                       <div className="d-none d-md-block col-md-6 img__div">
-                        <div className="upperDiv">{education.impact}</div>
+                        <div
+                          className="upperDiv"
+                          style={{
+                            backgroundColor:
+                              index % 2 != 0 ? "#E8630A" : "#14213d",
+                          }}
+                        >
+                          {education.impact}
+                        </div>
                         <div
                           id="carouselExampleIndicators"
                           className="carousel slide"
