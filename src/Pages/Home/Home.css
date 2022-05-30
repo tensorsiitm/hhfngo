@@ -20,7 +20,7 @@
     width: 11px!important;
     height: 10px!important;
     margin: 0px 5px!important;
-    background-color: #E8630A!important;
+    background-color: #fca311!important;
     border-radius: 50%;
 }
 
@@ -43,12 +43,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #003d73;
+    background-color: #0aa1dd;;
     color: #F1eee9;
     text-align: center;
 }
 .h2w{
-    color:#E8630A;
+   color: #14213d;;
 }
 .hr1{
     background: none;
@@ -177,11 +177,24 @@ span.h3{
     margin-top: 3em;
     border: 2px solid white;
     border-radius: 15px;
-    padding: 0.5rem;
+    padding: 0.8rem;
 }
 
 .donatebckg{
     grid-column: 1;
     grid-row: 1;
     max-width: 100vw;
+}
+
+.MuiButton-contained {
+    background-color: red !important;
+    padding: 10px 20px !important;
+    margin:  20px 0 !important;
+    border-radius:10px !important ;
+    font-size: 16px !important;
+    transition: transform 150ms ease-in-out !important;
+}
+
+.MuiButton-contained:hover{
+    transform: scale(1.1);
 }

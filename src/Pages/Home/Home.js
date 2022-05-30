@@ -9,6 +9,8 @@ import donatejar from "../../Shared/images/hand-holding-jar.png";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import { Impact } from "./impacts.js";
+import FooterHome from "./FooterHome.js"
+import DonateSlide from "./DonateSlide.js"
 
 function Home() {
   const images = [
@@ -193,9 +195,13 @@ function Home() {
         <img src={donatejar} className="donatebckg"/>
         <p className="donatep">
           Donate now and bring hope to the unprivileged in need.
+          <br/>
+          <Button variant="contained" color="success" endIcon={<Heart />}>
+          DONATE
+        </Button>
         </p>
       </div>
-      
+      <FooterHome />
     </>
   );
 }

@@ -35,21 +35,21 @@ const pages = [
     drpdns: [],
   },
   {
-    title: "Profile",
+    title: "Verticals",
     isdrpdn: true,
     link: "",
     drpdns: [
       {
-        title: "a",
-        link: "/pofilea",
+        title: "Education",
+        link: "/education",
       },
       {
-        title: "b",
-        link: "/pofileb",
+        title: "Poverty Alleviation",
+        link: "/poverty_alleviation",
       },
       {
-        title: "c",
-        link: "/pofilec",
+        title: "Public Health",
+        link: "/public-health",
       },
     ],
   },
@@ -271,7 +271,7 @@ export function MyDrawer() {
                     <List component="div" disablePadding>
                       {page.drpdns.map((drpdn) => (
                         <ListItem sx={{ pl: 4 }}>
-                          <Link to={drpdn.link} onClick={() => {
+                          <Link to={drpdn.link}  className="homelike" onClick={() => {
                             closeDrawer();
                           }}>{drpdn.title}</Link>
                         </ListItem>
