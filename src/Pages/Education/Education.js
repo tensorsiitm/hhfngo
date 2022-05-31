@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     color: "#FFF",
     textAlign: "center",
     marginBottom: "10px",
+    paddingTop: "10px",
   },
   box: {},
   image: {
@@ -190,13 +191,6 @@ export const Education = (props) => {
   const classes = useStyles();
   return (
     <>
-      {/* <div className="outer-div">
-        <Caarousel />
-      </div>
-      <div className="title">
-        <div id="name">Education</div>
-        <div id="caption" className="text-center"></div>
-      </div> */}
       <div className=" outer____div">
         <div className=" d-none d-md-block  outermost_div">
           <div>
@@ -225,8 +219,8 @@ export const Education = (props) => {
                       <Typography>{item.Problem}</Typography>
                       <a
                         href={"#" + item.Tag.split(" ")[0]}
-                        className="btn mt-3"
-                        style={{ backgroundColor: "#14213d", color: "#fff" }}
+                        className="btn mt-3 text-white"
+                        style={{ backgroundColor: "#14213d" }}
                       >
                         Know More
                       </a>
@@ -248,7 +242,15 @@ export const Education = (props) => {
                         id={index}
                         className="d-none d-md-block col-md-6 img__div"
                       >
-                        <div className="upperDiv">{education.impact}</div>
+                        <div
+                          className="upperDiv"
+                          style={{
+                            backgroundColor:
+                              index % 2 != 0 ? "#E8630A" : "#14213d",
+                          }}
+                        >
+                          {education.impact}
+                        </div>
                         <div
                           id="carouselExampleIndicators"
                           className="carousel slide"
@@ -293,7 +295,7 @@ export const Education = (props) => {
                         className="col-12 col-md-6 div_stepper"
                         style={{
                           backgroundColor:
-                            index % 2 == 0 ? "#14213d" : "#fca311 ",
+                            index % 2 == 0 ? "#14213d" : "#E8630A ",
                           color: "white",
                         }}
                       >
@@ -312,7 +314,7 @@ export const Education = (props) => {
                         className="col-12 col-md-6 div_stepper"
                         style={{
                           backgroundColor:
-                            index % 2 == 0 ? "#14213d" : "#fca311 ",
+                            index % 2 == 0 ? "#14213d" : "#E8630A ",
                           color: "white",
                         }}
                       >
@@ -325,7 +327,15 @@ export const Education = (props) => {
                         <VerticalLinearStepper education={education.infor} />
                       </div>
                       <div className="d-none d-md-block col-md-6 img__div">
-                        <div className="upperDiv">{education.impact}</div>
+                        <div
+                          className="upperDiv"
+                          style={{
+                            backgroundColor:
+                              index % 2 != 0 ? "#E8630A" : "#14213d",
+                          }}
+                        >
+                          {education.impact}
+                        </div>
                         <div
                           id="carouselExampleIndicators"
                           className="carousel slide"

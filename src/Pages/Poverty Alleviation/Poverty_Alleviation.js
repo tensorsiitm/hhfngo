@@ -2,10 +2,8 @@ import pic from "../../Shared/images/montain.jpg";
 import "./Poverty_Alleviation.css";
 import { Block } from "../../Components/Block/Block";
 import { Typography, makeStyles } from "@material-ui/core";
-import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
+import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
+import ArrowRightRoundedIcon from "@material-ui/icons/ArrowRightRounded";
 const useStyles = makeStyles({
   head: {
     color: "#FFF",
@@ -45,24 +43,11 @@ const useStyles = makeStyles({
     marginLeft: "calc(50% - 20px)",
     maxWidth: "40px",
     minHeight: "4px",
-    backgroundColor: "#14213d",
+    backgroundColor: "#E8630A",
     borderRadius: "16px",
   },
 });
 export const Poverty_Alleviation = (props) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-  const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, scale: 0 },
-  };
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
   const classes = useStyles();
   const Poverty_Alleviation_ = [
     {
@@ -77,6 +62,7 @@ export const Poverty_Alleviation = (props) => {
       ),
       header: "CELEBRATION OF EVENTS",
       idFake: "Celebration",
+      impact: "https://www.facebook.com/pg/hhfngomum/",
     },
     {
       id: "DISTRIBUTION",
@@ -89,6 +75,7 @@ export const Poverty_Alleviation = (props) => {
       ),
       header: "DISTRIBUTION OF BOOKS",
       idFake: "Distribution",
+      impact: "https://www.facebook.com/pg/hhfngomum/",
     },
     {
       id: "SCHOOL",
@@ -101,6 +88,7 @@ export const Poverty_Alleviation = (props) => {
       ),
       header: "SCHOOL EDUCATION MATERIAL",
       idFake: "School",
+      impact: "https://www.facebook.com/pg/hhfngomum/",
     },
   ];
   const Poverty_Alleviation_Data = [
@@ -122,10 +110,13 @@ export const Poverty_Alleviation = (props) => {
   ];
   return (
     <>
-      <div>
-        <div className="heading mt-5">
+      <div style={{ backgroundColor: "#E8630A" }}>
+        <div className="heading pt-3" style={{ color: "#14213d" }}>
           <Typography variant="h5"> POVERTY ALLEVIATION</Typography>
-          <h6 className="underlineH61"></h6>
+          <h6
+            className="underlineH61"
+            style={{ backgroundColor: "#14213d" }}
+          ></h6>
         </div>
         <div className="container">
           <div className="row">
@@ -140,13 +131,12 @@ export const Poverty_Alleviation = (props) => {
           </div>
         </div>
       </div>
-      {/* */}
 
-      <div>
+      <div style={{ backgroundColor: "#14213d" }}>
         <div className="container">
           {Poverty_Alleviation_.map((poverty, index) => (
             <div id={poverty.idFake}>
-              <div className="row my-3">
+              <div className="row py-3">
                 <div
                   className="header_div mb-3 pt-3"
                   style={{ color: "#fca311" }}
@@ -157,79 +147,95 @@ export const Poverty_Alleviation = (props) => {
                   </Typography>
                 </div>
                 {index % 2 == 0 ? (
-                  <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={boxVariant}
-                    initial="hidden"
-                    animate={control}
-                  >
-                    <div className="outer__div">
+                  <div className="outer__div">
+                    <div
+                      className="d-none d-md-block col-md-6 img__div"
+                      style={{
+                        borderRadius: "16px",
+                      }}
+                    >
                       <div
-                        className="d-none d-md-block col-md-6 img__div"
-                        style={{
-                          borderRadius: "16px",
-                        }}
+                        id="carouselExampleIndicators"
+                        className="carousel slide"
+                        data-bs-ride="carousel"
+                        style={{ height: "100%" }}
                       >
                         <div
-                          id="carouselExampleIndicators"
-                          className="carousel slide"
-                          data-bs-ride="carousel"
+                          className="carousel-inner"
                           style={{ height: "100%" }}
                         >
                           <div
-                            className="carousel-inner"
+                            className="carousel-item active"
                             style={{ height: "100%" }}
                           >
-                            <div
-                              className="carousel-item active"
-                              style={{ height: "100%" }}
-                            >
-                              <img
-                                src={pic}
-                                className="d-block w-100 img__conatainer"
-                              />
-                            </div>
-                            <div
-                              className="carousel-item"
-                              style={{ height: "100%" }}
-                            >
-                              <img
-                                src={pic}
-                                className="d-block w-100 img__conatainer"
-                              />
-                            </div>
-                            <div
-                              className="carousel-item"
-                              style={{ height: "100%" }}
-                            >
-                              <img
-                                src={pic}
-                                className="d-block w-100 img__conatainer"
-                              />
-                            </div>
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
+                          </div>
+                          <div
+                            className="carousel-item"
+                            style={{ height: "100%" }}
+                          >
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
+                          </div>
+                          <div
+                            className="carousel-item"
+                            style={{ height: "100%" }}
+                          >
+                            <img
+                              src={pic}
+                              className="d-block w-100 img__conatainer"
+                            />
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="col-12 col-md-6 div_stepper text-center"
-                        style={{
-                          color: index % 2 == 0 ? "#14213d" : "#fca311 ",
-                        }}
-                      >
-                        {poverty.body}
-                      </div>
                     </div>
-                  </motion.div>
-                ) : (
-                  <div className="outer__div">
                     <div
-                      className="col-12 col-md-6 div_stepper text-center"
+                      className="col-12 col-md-6 div_stepper text-center center_1"
                       style={{
                         color: index % 2 != 0 ? "#14213d" : "#fca311 ",
                       }}
                     >
-                      {poverty.body}
+                      <div className="center_">
+                        {poverty.body}
+                        <a href={poverty.impact} className="btn impact mt-2">
+                          Learn More
+                          <span className="span4">
+                            <ArrowForwardIosRoundedIcon />
+                          </span>
+                          <span className="span3">
+                            <ArrowRightRoundedIcon />
+                            <ArrowRightRoundedIcon />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="outer__div">
+                    <div
+                      className="col-12 col-md-6 div_stepper text-center center_1"
+                      style={{
+                        color: index % 2 == 0 ? "#14213d" : "#fca311 ",
+                      }}
+                    >
+                      <div className="center_">
+                        {poverty.body}
+                        <a href={poverty.impact} className="btn impact mt-2">
+                          Learn More
+                          <span className="span4">
+                            <ArrowForwardIosRoundedIcon />
+                          </span>
+                          <span className="span3">
+                            <ArrowRightRoundedIcon />
+                            <ArrowRightRoundedIcon />
+                          </span>
+                        </a>
+                      </div>
                     </div>
                     <div
                       className="d-none d-md-block col-md-6 img__div"

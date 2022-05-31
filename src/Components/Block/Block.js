@@ -18,7 +18,7 @@ export const Block = (props) => {
                 <h6 className="underlineH61"></h6>
               </div>
               <div className="image__a">
-                <a href={"#" + props.poverty.idFake} className="btn ">
+                <a href={"#" + props.poverty.idFake} className="btn ac">
                   Read More
                 </a>
                 <span className="span1">

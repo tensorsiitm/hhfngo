@@ -71,7 +71,44 @@
     align-items: center;
 }
 
+.impact {
+    color: #fca311 !important;
 
+}
+
+.span4 {
+
+    opacity: 1;
+    transition: all 0.25s linear;
+}
+
+.span3 {
+    opacity: 0;
+    transition: all 0.25s linear;
+}
+
+.center_1 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.btn:focus{
+    outline:0 !important;
+    box-shadow: none !important;
+
+}
+.center_ {
+    max-width: 400px;
+}
+
+.impact:hover .span4 {
+    opacity: 0;
+}
+
+.impact:hover .span3 {
+    opacity: 1;
+}
 
 .profile {
     width: 100%;

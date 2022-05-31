@@ -11,21 +11,20 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
-import Dropdown from 'react-bootstrap/Dropdown';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import ListItem from '@mui/material/ListItem';
-import Collapse from '@mui/material/Collapse';
-import Divider from '@mui/material/Divider';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import "bootstrap/dist/css/bootstrap.css";
+import Dropdown from "react-bootstrap/Dropdown";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import ListItem from "@mui/material/ListItem";
+import Collapse from "@mui/material/Collapse";
+import Divider from "@mui/material/Divider";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
 import "./navbar.css";
 import logo from "../../Shared/images/cropped-Helping-Hand-Foundation-Logo-1-2048x585.png";
 
 // line 208: make different open variables for each dropdown list.
-
 
 const pages = [
   {
@@ -35,7 +34,7 @@ const pages = [
     drpdns: [],
   },
   {
-    title: "Verticals",
+    title: "Vertical",
     isdrpdn: true,
     link: "",
     drpdns: [
@@ -53,7 +52,7 @@ const pages = [
       },
     ],
   },
-  
+
   {
     title: "Interventions",
     isdrpdn: false,
@@ -83,9 +82,7 @@ const pages = [
     isdrpdn: false,
     link: "/contactUs",
     drpdns: [],
-  }
-   
-
+  },
 ];
 
 const Search = styled("div")(({ theme }) => ({
@@ -134,12 +131,11 @@ const Navbar = () => {
     <AppBar position="static" color="default">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", lg: "none" } }}>
             <MyDrawer />
           </Box>
-          <Box sx={{ flexGrow: 1}}>
-          <img src={logo} className="logo"/>
+          <Box sx={{ flexGrow: 1 }}>
+            <img src={logo} className="logo" />
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
             {pages.map((page) => {
@@ -152,23 +148,24 @@ const Navbar = () => {
 
                     <Dropdown.Menu>
                       {page.drpdns.map((drpdn) => (
-                        <><Dropdown.Item>
-                          <Link
-                            to={drpdn.link}
-                            sx={{
-                              my: 2,
-                              color: "inherit",
-                              display: "block",
-                            }}
-                          >
-                            {drpdn.title}
-                          </Link>
-                        </Dropdown.Item>
-                        <Dropdown.Divider /></>
+                        <>
+                          <Dropdown.Item>
+                            <Link
+                              to={drpdn.link}
+                              sx={{
+                                my: 2,
+                                color: "inherit",
+                                display: "block",
+                              }}
+                            >
+                              {drpdn.title}
+                            </Link>
+                          </Dropdown.Item>
+                          <Dropdown.Divider />
+                        </>
                       ))}
                     </Dropdown.Menu>
                   </Dropdown>
-                
                 );
               } else {
                 return (
@@ -200,8 +197,6 @@ const Navbar = () => {
 };
 export default Navbar;
 
-
-
 export function MyDrawer() {
   const [state, setState] = React.useState(false);
 
@@ -216,7 +211,6 @@ export function MyDrawer() {
   const handleClick = () => {
     setOpen(!open);
   };
-
 
   return (
     <div>
@@ -256,40 +250,52 @@ export function MyDrawer() {
             <CloseIcon />
           </IconButton>
           <List
-            sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
             component="nav"
             aria-labelledby="list"
           >
             {pages.map((page) => {
               if (page.isdrpdn) {
-                return (<>
-                  <ListItemButton onClick={handleClick}>
-                    <ListItemText>{page.title}</ListItemText>
-                    {open ? <ExpandLess /> : <ExpandMore />}
-                  </ListItemButton>
-                  <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                      {page.drpdns.map((drpdn) => (
-                        <ListItem sx={{ pl: 4 }}>
-                          <Link to={drpdn.link}  className="homelike" onClick={() => {
-                            closeDrawer();
-                          }}>{drpdn.title}</Link>
-                        </ListItem>
-                      ))}
-                    </List>
-                  </Collapse>
-                  <Divider /></>);
+                return (
+                  <>
+                    <ListItemButton onClick={handleClick}>
+                      <ListItemText>{page.title}</ListItemText>
+                      {open ? <ExpandLess /> : <ExpandMore />}
+                    </ListItemButton>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                      <List component="div" disablePadding>
+                        {page.drpdns.map((drpdn) => (
+                          <ListItem sx={{ pl: 4 }}>
+                            <Link
+                              to={drpdn.link}
+                              onClick={() => {
+                                closeDrawer();
+                              }}
+                            >
+                              {drpdn.title}
+                            </Link>
+                          </ListItem>
+                        ))}
+                      </List>
+                    </Collapse>
+                    <Divider />
+                  </>
+                );
               } else {
-                return (<>
-                  <Link
-                    to={page.link}
-                    sx={{ my: 2, color: "inherit", display: "block" }}
-                    className="homelikexs" onClick={() => {
-                      closeDrawer();
-                    }}
-                  >
-                    {page.title}
-                  </Link><Divider/></>
+                return (
+                  <>
+                    <Link
+                      to={page.link}
+                      sx={{ my: 2, color: "inherit", display: "block" }}
+                      className="homelikexs"
+                      onClick={() => {
+                        closeDrawer();
+                      }}
+                    >
+                      {page.title}
+                    </Link>
+                    <Divider />
+                  </>
                 );
               }
             })}
@@ -304,10 +310,8 @@ export function MyDrawer() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-
         </Drawer>
       </React.Fragment>
     </div>
   );
 }
-
