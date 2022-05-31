@@ -9,8 +9,7 @@ import donatejar from "../../Shared/images/hand-holding-jar.png";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import { Impact } from "./impacts.js";
-import FooterHome from "./FooterHome.js"
-import DonateSlide from "./DonateSlide.js"
+import FooterHome from "./FooterHome.js";
 
 function Home() {
   const images = [

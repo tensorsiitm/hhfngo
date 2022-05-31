@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.6f7f8d10.css",
-    "main.js": "/static/js/main.48ee4e65.js",
+    "main.css": "/static/css/main.87f63ffd.css",
+    "main.js": "/static/js/main.6a7fdc6a.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/hand-holding-jar.png": "/static/media/hand-holding-jar.b8bb3de1d7d6d7983abf.png",
     "static/media/montain.jpg": "/static/media/montain.96d4bc2ab7cefd6fbb7f.jpg",
+    "static/media/cropped-Helping-Hand-Foundation-Logo-1-2048x585.png": "/static/media/cropped-Helping-Hand-Foundation-Logo-1-2048x585.1c582126282b53275c07.png",
+    "static/media/poverty.jpg": "/static/media/poverty.257a2fb47fb20d530168.jpg",
+    "static/media/undesa.png": "/static/media/undesa.3072038bb32345cdeafa.png",
     "index.html": "/index.html",
-    "main.6f7f8d10.css.map": "/static/css/main.6f7f8d10.css.map",
-    "main.48ee4e65.js.map": "/static/js/main.48ee4e65.js.map",
+    "main.87f63ffd.css.map": "/static/css/main.87f63ffd.css.map",
+    "main.6a7fdc6a.js.map": "/static/js/main.6a7fdc6a.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f7f8d10.css",
-    "static/js/main.48ee4e65.js"
+    "static/css/main.87f63ffd.css",
+    "static/js/main.6a7fdc6a.js"
   ]
 }

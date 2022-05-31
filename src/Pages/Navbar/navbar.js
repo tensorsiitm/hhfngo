@@ -157,6 +157,7 @@ const Navbar = () => {
                                 color: "inherit",
                                 display: "block",
                               }}
+                              className="aitem"
                             >
                               {drpdn.title}
                             </Link>
