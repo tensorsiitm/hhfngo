@@ -3,13 +3,10 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #14213d;
+    background-color: rgb(11, 0, 96);
     color:#fca311;
     transition: all linear 0.25s;
 }
 .Div:hover{
-    
-    transform: scale(1.2);
-    box-shadow: 0 0 5px #fca311;
-   
+    transform: scale(1.1);
 }

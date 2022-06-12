@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&display=swap');
 
 
 
@@ -43,12 +44,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0aa1dd;;
-    color: #F1eee9;
+    background-color: #48cbff;
+    color: #14213d;
     text-align: center;
 }
 .h2w{
-   color: #14213d;;
+   color: rgb(11, 0, 96);
 }
 .hr1{
     background: none;
@@ -84,6 +85,8 @@
 
 .container2{
     margin-top: 35px;
+    border-top: 3px solid #ffd23d;
+    border-bottom: 3px solid #ffd23d;
 }
 
 .spangrid{
@@ -99,17 +102,18 @@
 p.unsdg{
     text-align: center;
     color: #E8630A;
-    font-family: 'Koulen', cursive;
-    font-size: min(4.8vw,36px);
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: min(4.2vw,32px);
     word-spacing: 1vw;
     margin: 0 5%;
 }
 
 .container3{
     display: block;
-    margin: 30px auto 55px auto!important;
+    margin: auto!important;
     width: min(1000px,76%)!important;
 }
+
 
 img.undesa{
     margin: 40px 0;
@@ -136,8 +140,8 @@ img.goals:hover{
 
 
 .container4{
-    color: #14213d;
-    background-color: #0aa1dd;
+    color: rgb(11, 0, 96);
+    background-color: #48cbff;
     padding: 30px 0 50px 0;
 }
 
@@ -148,10 +152,15 @@ img.goals:hover{
     text-align: center;    
 }
 span.h3{
-    color: orange;
+    color: rgb(255, 4, 0);
     font-size: 5rem;
     font-family: 'Koulen', cursive;
 
+}
+.h3im{   
+    margin: 80px 0 70px 0;
+    text-align: center;  
+    color: rgb(11, 0, 96);  
 }
 
 
@@ -165,7 +174,7 @@ span.h3{
 }
 
 .donatep{
-    color: #003d73;
+    color: #14213d;
     text-align: center;
     grid-column: 1;
     grid-row: 1;

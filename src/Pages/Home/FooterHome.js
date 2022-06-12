@@ -50,7 +50,7 @@ function FooterHome() {
     
                             <div className="cta-text">
                                 <h4>Admin Address</h4>
-                                <span>Helping Hand Foundation 302, Ganesh Society No: 02 CHSL, Off Our Lady of Sea Church
+                                <span>Helping Hand Foundation <br/>302, Ganesh Society No: 02 CHSL, Off Our Lady of Sea Church
                                     Rd, Uttan, Mira-Bhayander, Tal-Dist, Thane – 401106, Maharashtra, INDIA </span>
                             </div>
                         </div>
@@ -67,11 +67,10 @@ function FooterHome() {
                         <div className="single-cta">
                             <div className="cta-text">
                                 <h4>Disclaimer</h4>
-                                <span>No third party agency is working on our behalf for any recruitment, fundraising, trainings, camps or any other 
-                                    activities, interventions. If you come across any individual / organization making a monetary demand in our name 
-                                    please bring it to our notice immediately at (+91) 9987923843 / hhfngo2011@gmail.com . Please check/consult with 
-                                    us directly to get accurate information or assistance. Please beware of any unwarranted claims made by anyone on 
-                                    our behalf. Kindly bring any such claims to our notice for immediate attention and necessary legal actions.</span>
+                                <span>
+                                No third party agency / individual / organization is engaged on our behalf for any recruitment, fundraising, training/s, soliciting for any type of donations/grants, conducting sessions or any other activities or interventions.
+                                <br/>
+                                If you come across any such individual / organization making a monetary demand or any unwarranted claims in our name or on our behalf, please bring it to our notice immediately at (+91) 9987923843 / hhfngo2011@gmail.com and check with us to get accurate information or assistance.</span>
                             </div>
                         </div>
                     </div>

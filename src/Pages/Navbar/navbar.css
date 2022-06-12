@@ -1,6 +1,6 @@
 .logo{
     height: 45px;
-    margin:  0 15px;
+    margin: 15px;
 }
 
 .css-1oaipzr {
@@ -45,9 +45,8 @@ a {
 
 .dropdown-menu{
     background-color: #0000008c!important;
-    
     text-align: center!important;
-    margin-top: 5px!important;
+    margin-top: 9px!important;
     padding: 0 !important;
     font-weight: 400 !important;
     transform: translate3d(0px, 45px, 0px) !important;

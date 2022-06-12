@@ -7,17 +7,12 @@ import  Heart from "@material-ui/icons/FavoriteRounded";
 import undesa from "../../Shared/images/undesa.png";
 import donatejar from "../../Shared/images/hand-holding-jar.png";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 import { Impact } from "./impacts.js";
 import FooterHome from "./FooterHome.js";
 
 function Home() {
   const images = [
-    {
-      src: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-      label: "First IMAGe",
-      desc: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-    },
+    
 
     {
       src: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
@@ -30,6 +25,11 @@ function Home() {
       label: "Third IMAGe",
       desc: "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
     },
+    {
+      src: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+      label: "First IMAGe",
+      desc: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+    }
   ];
 
   return (
@@ -60,7 +60,7 @@ function Home() {
             <p>
               Humbled and Thank you for visiting us virtually. We are a Mumbai
               based Multidisciplinary Charitable non-profit organization
-              empowering and impacting unprivileged lives. Vide our thematic
+              empowering and impacting unprivileged lives vide our thematic
               verticals aligned to the United Nations SDGs 1 to 5, 8 & 17.
             </p>
           </div>
@@ -100,12 +100,11 @@ function Home() {
       <Grid container className="container2">
         <Grid item xs={12} md={8} className="spangrid">
           <div className="paper1">
-            <Zoom>
+            <Fade bottom>
               <p className="unsdg">
-                DECADES OF HUMANITARIAN SERVICES ALIGNED TO UNITED NATIONS
-                Sustainable Development Goals
+                DECADES OF HUMANITARIAN SERVICES ALIGNED TO UNITED NATIONS SUSTAINABLE DEVELOPMENT GOALS
               </p>
-            </Zoom>
+            </Fade>
           </div>
         </Grid>
         <Grid item xs={12} md={4} className="spangrid">
@@ -113,6 +112,7 @@ function Home() {
         </Grid>
       </Grid>
 
+      <section style={{width:"100%", backgroundColor: "#ffea75", padding:"50px 0 0 0"}}>
       <Grid container className="container3" justify="center">
         <Grid item xs={1} className="xsgapssdg"></Grid>
         <Grid item xs={4} md={3}>
@@ -173,10 +173,12 @@ function Home() {
           />{" "}
         </Grid>
       </Grid>
+      <div style={{width:"100%", backgroundColor:"#48cbff", height:"2px", margin:"50px 0 30px 0"}}></div>
+      </section>
 
       <Grid container className="container4" justify="center">
         <Grid item xs="10">
-          <h3 className="h3impact">
+        <h3 className="h3impact">
             Here is the impact <br />
             <Fade left cascade delay={60}>
               <span className="h3">You</span>
@@ -187,6 +189,9 @@ function Home() {
 
         <Grid item xs={10}>
           <Impact />
+        </Grid>
+        <Grid item xs={9} md={6} lg={5}>
+        <h3 className="h3im">We express deep gratitude to our donors for partnering with us in nation building.</h3>
         </Grid>
       </Grid>
 

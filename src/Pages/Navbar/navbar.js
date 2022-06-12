@@ -34,7 +34,13 @@ const pages = [
     drpdns: [],
   },
   {
-    title: "Vertical",
+    title: "Profile",
+    isdrpdn: false,
+    link: "/profile",
+    drpdns: [],
+  },
+  {
+    title: "Interventions",
     isdrpdn: true,
     link: "",
     drpdns: [
@@ -53,12 +59,7 @@ const pages = [
     ],
   },
 
-  {
-    title: "Interventions",
-    isdrpdn: false,
-    link: "/interventions",
-    drpdns: [],
-  },
+  
   {
     title: "Stories of Change",
     isdrpdn: false,
