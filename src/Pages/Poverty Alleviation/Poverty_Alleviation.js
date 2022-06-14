@@ -54,7 +54,7 @@ export const Poverty_Alleviation = (props) => {
       id: "CELEBRATION",
       body: (
         <div>
-          <span>C</span>elebrating birthdays, main stream events, festivals free
+          Celebrating birthdays, main stream events, festivals free
           of cost with the unprivileged children boosts the morale of the kids
           and they experience the happiness too, thus the feeling of being in
           poverty vanishes briefly.
@@ -68,7 +68,7 @@ export const Poverty_Alleviation = (props) => {
       id: "DISTRIBUTION",
       body: (
         <div>
-          <span>P</span>re-owned clothing donated to us by mainstream society
+          Pre-owned clothing donated to us by mainstream society
           are distributed free to our unprivileged beneficiaries which supports
           their household, thus reducing poverty to a fraction.
         </div>
@@ -81,7 +81,7 @@ export const Poverty_Alleviation = (props) => {
       id: "SCHOOL",
       body: (
         <div>
-          <span>S</span>chool notebooks, stationary, crayons are distributed
+          School notebooks, stationary, crayons are distributed
           free to unprivileged children studying in govt and semi-private
           schools free of cost
         </div>
@@ -136,7 +136,10 @@ export const Poverty_Alleviation = (props) => {
         <div className="container">
           {Poverty_Alleviation_.map((poverty, index) => (
             <div id={poverty.idFake}>
-              <div className="row py-3">
+              <div
+                className="row pb-5 pt-2"
+                style={{ borderBottom: "2px solid #fca311" }}
+              >
                 <div
                   className="header_div mb-3 pt-3"
                   style={{ color: "#fca311" }}
