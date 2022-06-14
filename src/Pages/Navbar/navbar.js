@@ -34,7 +34,13 @@ const pages = [
     drpdns: [],
   },
   {
-    title: "Vertical",
+    title: "Profile",
+    isdrpdn: false,
+    link: "/profile",
+    drpdns: [],
+  },
+  {
+    title: "Interventions",
     isdrpdn: true,
     link: "",
     drpdns: [
@@ -47,18 +53,13 @@ const pages = [
         link: "/poverty_alleviation",
       },
       {
-        title: "c",
-        link: "/pofilec",
+        title: "Public Health",
+        link: "/public-health",
       },
     ],
   },
 
-  {
-    title: "Interventions",
-    isdrpdn: false,
-    link: "/interventions",
-    drpdns: [],
-  },
+  
   {
     title: "Stories of Change",
     isdrpdn: false,
@@ -157,6 +158,7 @@ const Navbar = () => {
                                 color: "inherit",
                                 display: "block",
                               }}
+                              className="aitem"
                             >
                               {drpdn.title}
                             </Link>

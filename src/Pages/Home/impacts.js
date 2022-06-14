@@ -34,7 +34,7 @@ const useStyles = makeStyles({
     fontSize: "100px",
     color: "#fca311",
   },
-  text: { color: "#14213d",
+  text: { color: "rgb(11, 0, 96)",
   fontWeight: "800"
  },
   underlineH61: {

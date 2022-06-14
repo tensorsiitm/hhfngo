@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import  Home  from "./Pages/Home/Home";
+import  Footer from "./Components/Footer/Footer";
 import { Education } from "./Pages/Education/Education";
 import  Navbar  from "./Pages/Navbar/navbar.js";
 import { Poverty_Alleviation } from "./Pages/Poverty Alleviation/Poverty_Alleviation";
@@ -18,7 +19,8 @@ function App() {
             element={<Poverty_Alleviation />}
           />
           
-        </Routes>
+        </Routes> 
+        <Footer/>
       </BrowserRouter>
     </div>
   );
