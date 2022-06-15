@@ -11,7 +11,7 @@
   width: 100% !important;
   padding: 0px !important;
   margin: 0px !important;
-  background: linear-gradient(to bottom, #14213d 25%, #E8630A 75% );
+  background: linear-gradient(to bottom, #48cbff 25%, #E8630A 75%);
 }
 
 .title #name {
@@ -39,7 +39,7 @@
 .slider-pick {
   position: relative;
   border: 1px solid black;
-  border-bottom: 4px solid #14213d;
+  border-bottom: 4px solid #48cbff;
   border-radius: 16px;
   padding: 15px;
   background-color: #fff;
@@ -54,6 +54,14 @@
   width: 100%;
 }
 
+._header {
+
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+}
+
 #text_appearing:hover {
   opacity: 0;
   transition: opacity 0.5s;
@@ -64,7 +72,7 @@
 }
 
 .text__overlay {
-  color: #14213d;
+  color: #48cbff;
   position: absolute;
   padding: 10px;
   top: 0;
@@ -137,7 +145,7 @@
   padding: 10px;
   text-align: center;
   font-size: 1vw;
-  background: #14213d;
+  background: #48cbff;
   transition: all 0.5s linear;
   opacity: 0;
 }

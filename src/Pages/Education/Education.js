@@ -2,6 +2,12 @@ import { Typography, makeStyles } from "@material-ui/core";
 import pic from "../../Shared/images/montain.jpg";
 import VerticalLinearStepper from "../../Components/Stepper/Stepper";
 import CastForEducationRoundedIcon from "@material-ui/icons/CastForEducationRounded";
+import BeachAccessRoundedIcon from "@material-ui/icons/BeachAccessRounded";
+import SchoolRoundedIcon from "@material-ui/icons/SchoolRounded";
+import RedeemRoundedIcon from "@material-ui/icons/RedeemRounded";
+import AccountBalanceRoundedIcon from "@material-ui/icons/AccountBalanceRounded";
+import ComputerRoundedIcon from "@material-ui/icons/ComputerRounded";
+import LocalLibraryRoundedIcon from "@material-ui/icons/LocalLibraryRounded";
 import "./Education.css";
 
 const useStyles = makeStyles({
@@ -11,14 +17,13 @@ const useStyles = makeStyles({
     marginBottom: "10px",
     paddingTop: "10px",
   },
-  box: {},
   image: {
     width: "100%",
     fontSize: "150px",
     color: "#fca311",
   },
   text: {
-    color: "#14213d",
+    color: "#48cbff",
   },
   underlineH6: {
     marginTop: "10px",
@@ -39,7 +44,7 @@ const useStyles = makeStyles({
     padding: "10px",
     textAlign: "center",
     fontSize: "8px",
-    backgroundColor: "#14213d",
+    backgroundColor: "#48cbff",
     transition: "all 0.5s linear",
     opacity: 0,
     "&:hover": {
@@ -57,32 +62,7 @@ const useStyles = makeStyles({
     borderRadius: "16px",
   },
 });
-const Education_data_ = [
-  {
-    Problem: "Children from migrant footloose dailywage families ",
-    Tag: "Kindergarten Education",
-  },
-  {
-    Problem: " Children from migrant footloose dailywage families ",
-    Tag: "Academic Education ",
-  },
-  {
-    Problem: "Children from migrant footloose dailywage families ",
-    Tag: "Remedial Learning",
-  },
-  {
-    Problem: "Children from migrant footloose dailywage families",
-    Tag: "Digital Learning",
-  },
-  {
-    Problem: "Children from migrant footloose dailywage families ",
-    Tag: "Summer Camps",
-  },
-  {
-    Problem: "Children from migrant footloose dailywage families ",
-    Tag: "Value Education",
-  },
-];
+
 const Education_data_information = [
   {
     Tag: "Kindergarten Education",
@@ -186,13 +166,67 @@ const Education_data_information = [
       },
     ],
   },
+  {
+    Tag: "Gifting School Notebooks and stationary",
+    impact:
+      "300 Students directly benefitted through the sessions and learned basic reading, writing and arithmetic skills",
+    infor: [
+      {
+        label: "Problem",
+        information:
+          "Children from migrant footloose dailywage families living in slum pockets of rural and hard-to-reach areas are often engaged in anti-social activities or spend their childhood in playing around or accompanying their parents to work, at times even engaged in child labor, since they lack basic educational facilities and also unaffordable to attend mainstream preschools, thereby lacking basic education, a stepping platform to formal education",
+      },
+      {
+        label: "Solution",
+        information:
+          "Mainstream Quality Kindergarten English education, school supplies, uniforms, books, stationary, bags, nutrition, health screenings, celebrations of all major events and festivals, mainstream academic sessions for Nursery and Kindergarten, sports, Bi-annual Summative assessments, Co-Curricular Activities to list a few are accessed free of any remuneration by the unprivileged children irrespective of caste, creed or affiliations from Smiling Stars English Preschool, which operates in the slums out of a rented premises",
+      },
+    ],
+  },
 ];
 export const Education = (props) => {
   const classes = useStyles();
+  const Education_data_ = [
+    {
+      Problem: "Children from migrant footloose dailywage families ",
+      Tag: "Kindergarten Education",
+      icon: <CastForEducationRoundedIcon className={classes.image} />,
+    },
+    {
+      Problem: " Children from migrant footloose dailywage families ",
+      Tag: "Academic Education ",
+      icon: <AccountBalanceRoundedIcon className={classes.image} />,
+    },
+    {
+      Problem: "Children from migrant footloose dailywage families ",
+      Tag: "Remedial Learning",
+      icon: <LocalLibraryRoundedIcon className={classes.image} />,
+    },
+    {
+      Problem: "Children from migrant footloose dailywage families",
+      Tag: "Digital Learning",
+      icon: <ComputerRoundedIcon className={classes.image} />,
+    },
+    {
+      Problem: "Children from migrant footloose dailywage families ",
+      Tag: "Summer Camps",
+      icon: <BeachAccessRoundedIcon className={classes.image} />,
+    },
+    {
+      Problem: "Children from migrant footloose dailywage families ",
+      Tag: "Value Education",
+      icon: <SchoolRoundedIcon className={classes.image} />,
+    },
+    {
+      Problem: "Children from migrant footloose dailywage families ",
+      Tag: "Gifting School Notebooks and stationary",
+      icon: <RedeemRoundedIcon className={classes.image} />,
+    },
+  ];
   return (
     <>
       <div className=" outer____div">
-        <div className=" d-none d-md-block  outermost_div">
+        <div className=" d-none d-md-block  outermost_div p-3">
           <div>
             <Typography variant="h4" className={classes.head}>
               WHAT WE DO
@@ -203,7 +237,7 @@ export const Education = (props) => {
                 {Education_data_.map((item) => (
                   <div className="col-12 col-sm-5 col-lg-3 slider-pick m-2">
                     <div className={classes.box} id="text_appearing">
-                      <CastForEducationRoundedIcon className={classes.image} />
+                      {item.icon}
                       <Typography className={classes.text}>
                         {item.Tag}
                       </Typography>
@@ -220,7 +254,7 @@ export const Education = (props) => {
                       <a
                         href={"#" + item.Tag.split(" ")[0]}
                         className="btn mt-3 text-white"
-                        style={{ backgroundColor: "#14213d" }}
+                        style={{ backgroundColor: "#48cbff" }}
                       >
                         Know More
                       </a>
@@ -232,10 +266,14 @@ export const Education = (props) => {
           </div>
         </div>
         <div>
-          <div>
+          <div style={{ backgroundColor: "#48cbff" }}>
+            <div className="_header text-center pb-3 pt-3">
+              <Typography variant="h3">Education</Typography>
+              <h6 className={classes.underlineH61}></h6>
+            </div>
             {Education_data_information.map((education, index) => (
               <div key={index} id={education.Tag.split(" ")[0]}>
-                <div className="row ">
+                <div className="row">
                   {index % 2 == 0 ? (
                     <div className="outer__div">
                       <div
@@ -246,7 +284,7 @@ export const Education = (props) => {
                           className="upperDiv"
                           style={{
                             backgroundColor:
-                              index % 2 != 0 ? "#E8630A" : "#14213d",
+                              index % 2 != 0 ? "#E8630A" : "#48cbff",
                           }}
                         >
                           {education.impact}
@@ -295,7 +333,7 @@ export const Education = (props) => {
                         className="col-12 col-md-6 div_stepper"
                         style={{
                           backgroundColor:
-                            index % 2 == 0 ? "#14213d" : "#E8630A ",
+                            index % 2 == 0 ? "#48cbff" : "#E8630A ",
                           color: "white",
                         }}
                       >
@@ -314,7 +352,7 @@ export const Education = (props) => {
                         className="col-12 col-md-6 div_stepper"
                         style={{
                           backgroundColor:
-                            index % 2 == 0 ? "#14213d" : "#E8630A ",
+                            index % 2 == 0 ? "#48cbff" : "#E8630A ",
                           color: "white",
                         }}
                       >
@@ -331,7 +369,7 @@ export const Education = (props) => {
                           className="upperDiv"
                           style={{
                             backgroundColor:
-                              index % 2 != 0 ? "#E8630A" : "#14213d",
+                              index % 2 != 0 ? "#E8630A" : "#48cbff",
                           }}
                         >
                           {education.impact}

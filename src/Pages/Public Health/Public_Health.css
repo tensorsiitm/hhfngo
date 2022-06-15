@@ -1,0 +1,176 @@
+.title {
+    position: absolute;
+    color: rgb(243, 239, 239);
+    font-size: 50px;
+    top: 35%;
+    left: calc(50vw - 100px);
+    margin: 0;
+}
+
+.outermost_div {
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    background: linear-gradient(to bottom, #48cbff 25%, #E8630A 75%);
+}
+
+.title #name {
+    font-family: "Cinzel";
+    border-bottom: 2px solid white;
+}
+
+.outer____div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+#caption {
+    font-family: "Estonia", serif;
+    font-size: 30px;
+}
+
+.outer-div {
+    height: calc(100vh - 50px);
+    width: 100vw
+}
+
+.slider-pick {
+    position: relative;
+    border: 1px solid black;
+    border-bottom: 4px solid #48cbff;
+    border-radius: 16px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    transition: box-shadow linear 0.25s;
+}
+
+.what_div {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+
+._header {
+
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+
+}
+
+#text_appearing:hover {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#text_apearing {
+    opacity: 1;
+}
+
+.text__overlay {
+    color: #48cbff;
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(256, 256, 256, 1);
+    border-radius: 16px;
+    transition: opacity 0.5s;
+    opacity: 0;
+
+}
+
+.text__overlay:hover {
+
+    opacity: 1;
+}
+
+.header_div {
+    width: 100%;
+
+    text-align: center;
+}
+
+.outer__div {
+    display: flex;
+    padding: 0 !important;
+}
+
+.img__div {
+    position: relative;
+    width: 100%;
+    height: 100% !important;
+    padding: 0px !important;
+    overflow: hidden;
+}
+
+.img__conatainer {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    transition: 0.5s all ease-in-out;
+}
+
+.img__conatainer:hover {
+    transform: scale(1.2);
+    filter: grayscale(100%);
+}
+
+.img__div, .div_stepper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background: #0e0e0f;
+    overflow: hidden
+}
+
+.product .imgbox {
+    height: 100%;
+
+}
+
+.product .imgbox img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.specifies {
+    position: absolute;
+    width: 100%;
+    bottom: -160px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.product:hover .specifies {
+    bottom: 0
+}
+.specifies div{
+ font-size: 10px !important;  
+ margin-bottom: 10px;  
+}

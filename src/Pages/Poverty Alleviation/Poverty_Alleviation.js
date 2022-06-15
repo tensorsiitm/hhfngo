@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     color: "#fca311",
   },
   text: {
-    color: "#14213d",
+    color: "#48cbff",
   },
   upperDiv: {
     position: "absolute",
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     padding: "10px",
     textAlign: "center",
     fontSize: "8px",
-    backgroundColor: "#14213d",
+    backgroundColor: "#48cbff",
     transition: "all 0.5s linear",
     opacity: 0,
     "&:hover": {
@@ -111,11 +111,11 @@ export const Poverty_Alleviation = (props) => {
   return (
     <>
       <div style={{ backgroundColor: "#E8630A" }}>
-        <div className="heading pt-3" style={{ color: "#14213d" }}>
-          <Typography variant="h5"> POVERTY ALLEVIATION</Typography>
+        <div className="heading pt-3" style={{ color: "#fff" }}>
+          <Typography variant="h3"> POVERTY ALLEVIATION</Typography>
           <h6
             className="underlineH61"
-            style={{ backgroundColor: "#14213d" }}
+            style={{ backgroundColor: "#48cbff" }}
           ></h6>
         </div>
         <div className="container">
@@ -132,13 +132,13 @@ export const Poverty_Alleviation = (props) => {
         </div>
       </div>
 
-      <div style={{ backgroundColor: "#14213d" }}>
+      <div style={{ backgroundColor: "#48cbff" }}>
         <div className="container">
           {Poverty_Alleviation_.map((poverty, index) => (
             <div id={poverty.idFake}>
               <div
                 className="row pb-5 pt-2"
-                style={{ borderBottom: "2px solid #fca311" }}
+                style={{ borderBottom: "2px solid #fff" }}
               >
                 <div
                   className="header_div mb-3 pt-3"
@@ -146,7 +146,7 @@ export const Poverty_Alleviation = (props) => {
                 >
                   <Typography variant="h4">
                     {poverty.header}
-                    <h6 className={classes.underlineH62}></h6>
+                    <h6 className={classes.underlineH62} style={{backgroundColor:'#fff'}}></h6>
                   </Typography>
                 </div>
                 {index % 2 == 0 ? (
@@ -200,7 +200,7 @@ export const Poverty_Alleviation = (props) => {
                     <div
                       className="col-12 col-md-6 div_stepper text-center center_1"
                       style={{
-                        color: index % 2 != 0 ? "#14213d" : "#fca311 ",
+                        color: index % 2 != 0 ? "#48cbff" : "#fca311 ",
                       }}
                     >
                       <div className="center_">
@@ -223,7 +223,7 @@ export const Poverty_Alleviation = (props) => {
                     <div
                       className="col-12 col-md-6 div_stepper text-center center_1"
                       style={{
-                        color: index % 2 == 0 ? "#14213d" : "#fca311 ",
+                        color: index % 2 == 0 ? "#48cbff" : "#fca311 ",
                       }}
                     >
                       <div className="center_">

@@ -11,19 +11,6 @@ import KeyboardArrowDownRoundedIcon from "@material-ui/icons/KeyboardArrowDownRo
 import Typography from "@mui/material/Typography";
 import { makeStyles } from "@material-ui/core";
 
-const steps = [
-  {
-    label: "Select campaign settings",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
-  },
-  {
-    label: "Create an ad group",
-    description:
-      "An ad group contains one or more ads which target a shared set of keywords.",
-  },
-];
 const useStyles = makeStyles({
   label: {
     color: "white",
@@ -33,7 +20,7 @@ export default function VerticalLinearStepper(props) {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleClick = () => {
-    activeStep == 0 ? setActiveStep(1) : setActiveStep(0);
+    activeStep === 0 ? setActiveStep(1) : setActiveStep(0);
   };
   const classes = useStyles();
   return (
